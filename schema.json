@@ -1,0 +1,55 @@
+{
+  "properties": {
+    "a": { "type": "null" },
+    "b": { "type": "boolean" },
+    "c": { "type": "number" },
+    "d": { "type": "string" }
+  },
+  "optionalProperties": {
+    "e": {
+      "elements": {
+        "type": "string"
+      }
+    },
+    "f": {
+      "elements": {
+        "elements": {
+          "properties": {
+            "g": { "type": "string" }
+          }
+        }
+      }
+    },
+    "h": {
+      "values": {
+        "type": "string"
+      }
+    },
+    "i": {
+      "values": {
+        "values": {
+          "values": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "j": {
+      "discriminator": {
+        "propertyName": "version",
+        "mapping": {
+          "1": {
+            "properties": {
+              "foo": { "type": "number" }
+            }
+          },
+          "2": {
+            "properties": {
+              "foo": { "type": "string" }
+            }
+          }
+        }
+      }
+    }
+  }
+}
